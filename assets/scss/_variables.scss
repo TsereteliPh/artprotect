@@ -1,0 +1,32 @@
+:root {
+	// FONTS
+	--font-primary: "Manrope", "Arial", sans-serif;
+	--font-secondary: "Oswald", "Arial", sans-serif;
+
+	// COLORS
+	--primary: #28b8af;
+	--secondary: #ffb342;
+	--tertiary: #0a5c57;
+
+	--fc-dark: #000;
+	--fc-light: #fff;
+
+	--bg-primary: #000;
+
+	// GRADIENTS
+	--main-gradient: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
+
+	// SHADOWS
+	--main-shadow: 0 10px 30px 0 var(--tertiary);
+
+	// Transition
+	--transition: all 0.3s ease;
+
+	// Z-index
+	--ui-index-1: 1; // Для наползающих элементов в общем потоке
+	--ui-index-2: 2; // Для наползающих элементов в общем потоке
+	--ui-index-3: 3; // Для масок
+	--ui-index-4: 4; // Для сайдбаров
+	--ui-index-5: 5; // Для модалок
+	--ui-index-6: 6; // Для эдементов, перекрывающих все
+}
