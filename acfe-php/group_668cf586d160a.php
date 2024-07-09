@@ -8,8 +8,29 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_668cf586f2468',
-			'label' => '',
-			'name' => '',
+			'label' => 'Телефон',
+			'name' => 'tel',
+			'aria-label' => '',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'acfe_field_group_condition' => 0,
+		),
+		array(
+			'key' => 'field_668d67e992283',
+			'label' => 'Email',
+			'name' => 'email',
 			'aria-label' => '',
 			'type' => 'text',
 			'instructions' => '',
@@ -53,7 +74,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1720519139,
+	'modified' => 1720543224,
 ));
 
 endif;

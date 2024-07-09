@@ -1,0 +1,27 @@
+.btn {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	padding: 15px;
+	color: var(--fc-light);
+	font-weight: 600;
+	font-size: 18px;
+	background: none;
+	border: 1px solid var(--primary);
+	border-radius: 10px;
+	box-shadow: var(--main-shadow);
+	transition: var(--transition);
+
+	@include mouse {
+
+		&:hover {
+			box-shadow: 0 0 5px var(--tertiary);
+		}
+	}
+
+	&:active {
+		opacity: 0.7;
+	}
+}
