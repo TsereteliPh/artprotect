@@ -1,0 +1,8 @@
+.title {
+	margin-bottom: 0;
+	color: var(--fc-light);
+	font-weight: 400;
+	font-size: clamp(1.5rem, 1.269rem + 1.026vw, 2.5rem);
+	font-family: var(--font-secondary);
+	text-align: center;
+}

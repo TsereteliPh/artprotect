@@ -29,7 +29,7 @@
 			)); ?>
 
 			<?php if ( $tel ) : ?>
-				<a href="<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__tel"><?php echo $tel; ?></a>
+				<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__tel"><?php echo $tel; ?></a>
 			<?php endif; ?>
 
 			<button class="btn header__callback" type="button" data-fancybox data-src="#callback">
@@ -56,7 +56,7 @@
 				<?php endif; ?>
 
 				<?php if ( $tel ) : ?>
-					<a href="<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__drop-tel"><?php echo $tel; ?></a>
+					<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__drop-tel"><?php echo $tel; ?></a>
 				<?php endif; ?>
 
 				<button class="btn header__drop-callback" type="button" data-fancybox data-src="#callback">
