@@ -1,0 +1,137 @@
+.modal {
+	display: none;
+	flex-direction: column;
+	gap: 60px;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 820px;
+	min-height: 460px;
+	padding: 70px 115px;
+	color: var(--fc-light);
+	background: var(--tertiary);
+
+	@include lg {
+		padding: 60px 80px;
+	}
+
+	@include sm {
+		gap: 40px;
+		min-height: 400px;
+		padding: 60px 30px;
+	}
+
+	@include xs {
+		max-width: 400px;
+		min-height: auto;
+		padding: 60px 20px 40px;
+	}
+
+	&--success {
+		max-width: 600px;
+		min-height: 320px;
+
+		@include sm {
+			max-width: 400px;
+			min-height: auto;
+		}
+
+		.modal__info {
+			flex-direction: column;
+			gap: 20px;
+			align-items: center;
+			text-align: center;
+		}
+
+		.modal__title,
+		.modal__text {
+			flex: 0 1 auto;
+		}
+	}
+
+	.carousel__button.is-close {
+		top: 15px;
+		right: 15px;
+		padding: 0;
+		background: none;
+		border: none;
+		border-radius: 50%;
+		opacity: 1;
+
+		@include xs {
+			top: 10px;
+			right: 10px;
+		}
+
+		svg {
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		width: 100%;
+
+		@include xs {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__title,
+	&__text {
+		flex: 1 0 50%;
+
+		@include xs {
+			text-align: center;
+		}
+	}
+
+	&__title {
+		text-align: left;
+	}
+
+	&__text {
+		font-weight: 600;
+		line-height: 1.4;
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 15px 10px;
+
+		@include xs {
+			grid-template-columns: 1fr;
+			width: 100%;
+		}
+	}
+
+	&__textarea {
+		grid-column: span 2;
+		min-height: 95px;
+
+		@include xs {
+			grid-column: auto;
+		}
+	}
+
+	&__policy {
+		align-self: center;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 1.4;
+		@include ui-link(var(--primary));
+
+		@include xs {
+			text-align: center;
+		}
+	}
+
+	&__submit {
+		width: 100%;
+	}
+}
