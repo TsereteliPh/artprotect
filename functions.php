@@ -96,6 +96,27 @@ function adem_excerpt( $limit, $ID = null ) {
 	return mb_substr( get_the_excerpt( $ID ), 0, $limit ) . '...';
 }
 
+// Breadcrumbs indent
+add_action('wp_footer', 'adem_breadcrumbs_indent');
+function adem_breadcrumbs_indent() {
+	$links = get_field( 'links', 'options' );
+	?>
+		<script>
+			const breadcrumbs = document.querySelector('.breadcrumb');
+
+			if (breadcrumbs) {
+				const main = document.querySelector('.main');
+
+				let indent = window.innerWidth > 576 ? 50 : 30;
+
+				let mainIndent = parseInt(getComputedStyle(main).marginTop);
+
+				main.style.marginTop = breadcrumbs.clientHeight + mainIndent + indent + 'px';
+			}
+		</script>
+	<?php
+}
+
 require 'inc/acf.php';
 require 'inc/load-more.php';
 require 'inc/mail.php';

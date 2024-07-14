@@ -145,5 +145,33 @@ iframe {
 }
 
 .main {
-	margin-bottom: auto;
+	margin: 190px 0 auto;
+
+	@include hg {
+		margin: 130px 0 auto;
+	}
+
+	@include md {
+		margin: 110px 0 auto;
+	}
+
+	@include xs {
+		margin: 85px 0 auto;
+	}
+
+	&--index {
+		margin: 0 0 auto;
+
+		@include hg {
+			margin: 0 0 auto;
+		}
+
+		@include md {
+			margin: 0 0 auto;
+		}
+
+		@include xs {
+			margin: 0 0 auto;
+		}
+	}
 }

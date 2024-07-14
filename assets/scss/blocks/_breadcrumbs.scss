@@ -1,0 +1,49 @@
+.breadcrumb {
+	position: absolute;
+	top: 220px;
+	z-index: var(--ui-index-2);
+	width: 100%;
+
+	@include hg {
+		top: 145px;
+	}
+
+	@include md {
+		top: 130px;
+	}
+
+	@include xs {
+		top: 100px;
+	}
+
+	.container {
+
+		> span {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 30px;
+			align-items: center;
+			justify-content: center;
+			color: var(--fc-light);
+
+			@include sm {
+				gap: 10px;
+				font-size: 14px;
+			}
+
+			span {
+
+				a {
+					text-decoration: none;
+					cursor: pointer;
+					@include ui-link(inherit);
+				}
+			}
+		}
+	}
+
+	&_last {
+		color: #54656f;
+		cursor: default;
+	}
+}
