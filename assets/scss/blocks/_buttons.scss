@@ -41,3 +41,19 @@
 		}
 	}
 }
+
+.btn-arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: auto;
+	aspect-ratio: 1/1;
+	padding: 0;
+	color: var(--fc-light);
+	background: var(--main-gradient);
+	border: none;
+	border-radius: 50%;
+	box-shadow: var(--main-shadow);
+	transition: var(--transition);
+}

@@ -77,3 +77,4 @@
 <?php endif ?>
 
 <main class="main<?php echo is_front_page() ? ' main--index' : ''; ?>">
+	<?php if ( is_front_page() ) get_template_part( 'layouts/partials/welcome' ); ?>

@@ -1,0 +1,169 @@
+.welcome {
+	position: relative;
+	padding: 280px 0 75px;
+	overflow: hidden;
+
+	@include hg {
+		padding: 220px 0 60px;
+	}
+
+	@include md {
+		padding: 180px 0 40px;
+	}
+
+	@include xs {
+		padding: 150px 0 30px;
+	}
+
+	&::before {
+		position: absolute;
+		bottom: 0;
+		left: calc(50% - 530px);
+		width: 1325px;
+		height: auto;
+		aspect-ratio: 1350 / 840;
+		background: url(assets/images/welcome-bg.jpg) no-repeat 50% / contain;
+		content: "";
+
+		@include hg {
+			left: calc(50% - 420px);
+			width: 1080px;
+		}
+
+		@include md {
+			right: -80px;
+			left: auto;
+			width: 900px;
+		}
+
+		@include sm {
+			width: 700px;
+		}
+
+		@include xs {
+			top: 0;
+			bottom: auto;
+			width: 480px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		max-width: 480px;
+
+		@include sm {
+			max-width: 360px;
+		}
+
+		@include xs {
+			gap: 20px;
+			max-width: none;
+		}
+	}
+
+	&__title {
+		margin-bottom: 0;
+		font-weight: 400;
+		font-size: clamp(1.625rem, 1.207rem + 1.859vw, 3.438rem);
+		font-family: var(--font-secondary);
+
+		@include xs {
+			max-width: 60%;
+		}
+
+		span {
+			color: var(--primary);
+		}
+	}
+
+	&__text {
+		margin-top: -10px;
+		font-size: 18px;
+		line-height: 1.4;
+
+		@include md {
+			font-size: 16px;
+		}
+
+		@include xs {
+			max-width: 80%;
+			margin-top: 0;
+		}
+	}
+
+	&__btn,
+	&__callback,
+	&__link {
+
+		@include xs {
+			align-self: center;
+			width: 100%;
+			max-width: 360px;
+		}
+	}
+
+	&__btn {
+		min-width: 390px;
+		min-height: 100px;
+
+		@include md {
+			min-width: 300px;
+			min-height: 50px;
+		}
+	}
+
+	&__callback {
+		display: none;
+
+		@include xs {
+			display: flex;
+			margin-top: -10px;
+		}
+
+		svg {
+			color: var(--primary);
+		}
+	}
+
+	&__link {
+		display: flex;
+		gap: 3px;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		margin-left: 40px;
+		font-weight: 500;
+		font-size: 18px;
+		text-decoration: none;
+
+		@include md {
+			margin-left: 0;
+		}
+
+		@include xs {
+			align-self: center;
+		}
+
+		.btn-arrow {
+			margin-right: 15px;
+		}
+
+		span {
+			color: var(--primary);
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		bottom: 100px;
+		left: 50%;
+		color: #989898;
+		transform: translateX(-50%) rotate(90deg);
+
+		@include md {
+			display: none;
+		}
+	}
+}
