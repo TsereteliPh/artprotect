@@ -1,0 +1,75 @@
+.gradient-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: var(--ui-index-1);
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	pointer-events: none;
+
+	&__element {
+		position: absolute;
+		width: 850px;
+		height: 950px;
+		background: linear-gradient(to bottom, var(--primary) 0%, #4efe8a 100%);
+		border-radius: 50%;
+		transform: rotate(60deg);
+		filter: blur(220px);
+
+		&:first-child {
+			top: 115px;
+			left: calc(50% - 1680px);  // -720px
+
+			@include lg {
+				left: calc(50% - 1480px);
+			}
+
+			@include sm {
+				top: 35px;
+				left: -800px;
+			}
+		}
+
+		&:nth-child(2) {
+			top: 800px;
+			right: calc(50% - 1590px); // -630px
+			opacity: 0.5;
+
+			@include xs {
+				display: none;
+			}
+		}
+
+		&:nth-child(3) {
+			top: 2250px;
+			right: calc(50% - 1650px); // -680px
+			transform: rotate(250deg);
+
+			@include lg {
+				right: calc(50% - 1450px);
+			}
+
+			@include sm {
+				top: 4350px;
+				right: -450px;
+				width: 500px;
+				height: 580px;
+			}
+		}
+
+		&:last-child {
+			top: 3180px;
+			left: calc(50% - 1560px); // -600px
+			transform: rotate(120deg);
+
+			@include lg {
+				left: calc(50% - 1400px);
+			}
+
+			@include xs {
+				display: none;
+			}
+		}
+	}
+}

@@ -68,6 +68,13 @@
 	</div>
 </header>
 
+<div class="gradient-background">
+	<div class="gradient-background__element"></div>
+	<div class="gradient-background__element"></div>
+	<div class="gradient-background__element"></div>
+	<div class="gradient-background__element"></div>
+</div>
+
 <?php if ( ! is_front_page() && function_exists( 'yoast_breadcrumb' ) ) : ?>
 	<div class="breadcrumb">
 		<div class="container">
