@@ -1,0 +1,113 @@
+.themis {
+	position: relative;
+	min-height: 1085px;
+	margin: -40px 0 -80px;
+	overflow: hidden;
+
+	@include hg {
+		min-height: 750px;
+		margin: 0 0 -40px;
+	}
+
+	@include sm {
+		min-height: 700px;
+		margin: 0;
+	}
+
+	@include xs {
+		min-height: auto;
+	}
+
+	&::before {
+		position: absolute;
+		bottom: 0;
+		left: calc(50% - 415px);
+		width: 1600px;
+		height: auto;
+		aspect-ratio: 1620/1100;
+		background: url(assets/images/themis-bg.jpg) no-repeat 50% / contain;
+		content: "";
+
+		@include hg {
+			left: calc(50% - 300px);
+			width: 1150px;
+		}
+
+		@include lg {
+			left: calc(50% - 200px);
+		}
+
+		@include sm {
+			left: calc(50% - 100px);
+			width: 850px;
+		}
+
+		@include xs {
+			right: -190px;
+			left: auto;
+			width: 550px;
+		}
+	}
+
+	&__container {
+		z-index: var(--ui-index-1);
+		padding: 140px 0;
+
+		@include hg {
+			padding: 80px 0;
+		}
+
+		@include sm {
+			padding: 0 0 80px;
+		}
+
+		@include xs {
+			padding: 0 0 365px;
+		}
+	}
+
+	&__text {
+		max-width: 540px;
+		font-size: 32px;
+		line-height: 1.4;
+
+		@include hg {
+			font-size: 24px;
+		}
+
+		@include sm {
+			max-width: none;
+		}
+
+		@include xs {
+			font-size: 20px;
+		}
+	}
+
+	&__small-text {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		max-width: 380px;
+		margin-top: 275px;
+		color: #d9d9d9;
+
+		@include hg {
+			margin-top: 150px;
+		}
+
+		@include xs {
+			max-width: none;
+			margin-top: 20px;
+		}
+
+		&::before {
+			display: block;
+			width: 90px;
+			height: auto;
+			aspect-ratio: 16/13;
+			background: url(assets/images/logo-small.svg) no-repeat 50% / contain;
+			content: "";
+		}
+	}
+}
