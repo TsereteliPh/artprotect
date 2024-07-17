@@ -70,14 +70,14 @@ acf_add_local_field_group(array(
 	'location' => array(
 		array(
 			array(
-				'param' => 'page_type',
-				'operator' => '!=',
-				'value' => 'front_page',
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'page',
 			),
 			array(
 				'param' => 'page_type',
 				'operator' => '!=',
-				'value' => 'posts_page',
+				'value' => 'front_page',
 			),
 		),
 	),
@@ -90,14 +90,14 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,
+	'acfe_display_title' => '',
 	'acfe_autosync' => array(
 		0 => 'php',
 	),
 	'acfe_form' => 0,
-	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1721212316,
+	'modified' => 1721229138,
 ));
 
 endif;
