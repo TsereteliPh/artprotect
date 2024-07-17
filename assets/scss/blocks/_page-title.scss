@@ -1,0 +1,31 @@
+.page-title {
+	position: relative;
+	overflow: hidden;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__background {
+		color: var(--primary);
+		font-weight: 400;
+		font-size: clamp(3.438rem, 1.058rem + 10.577vw, 13.75rem);
+		font-family: var(--font-tertiary);
+		line-height: 1;
+		text-align: center;
+		opacity: 0.2;
+	}
+
+	&__title {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -100%);
+
+		@include xs {
+			transform: translate(-50%, -60%);
+		}
+	}
+}

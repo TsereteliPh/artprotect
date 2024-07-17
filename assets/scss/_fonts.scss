@@ -57,3 +57,13 @@
 		url(assets/fonts/Oswald-Regular.woff) format("woff");
 	font-display: swap;
 }
+
+@font-face {
+	font-weight: 400;
+	font-family: OldStandardTT;
+	font-style: normal;
+	src:
+		url(assets/fonts/OldStandardTT-Regular.woff2) format("woff2"),
+		url(assets/fonts/OldStandardTT-Regular.woff) format("woff");
+	font-display: swap;
+}

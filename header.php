@@ -85,3 +85,13 @@
 
 <main class="main<?php echo is_front_page() ? ' main--index' : ''; ?>">
 	<?php if ( is_front_page() ) get_template_part( 'layouts/partials/welcome' ); ?>
+
+	<?php if ( ! is_front_page() && get_field( 'page_title_background' ) ) : ?>
+		<section class="page-title">
+			<div class="container--large page-title__container">
+				<div class="page-title__background"><?php the_field( 'page_title_background' ); ?></div>
+
+				<h1 class="title page-title__title"><?php the_field( 'page_title' ); ?></h1>
+			</div>
+		</section>
+	<?php endif; ?>
