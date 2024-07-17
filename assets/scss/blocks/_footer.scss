@@ -210,8 +210,8 @@
 		justify-self: end;
 		width: 160px;
 		height: auto;
-		aspect-ratio: 16/15; //! temporarily
-		background: #fff; //! temporarily
+		aspect-ratio: 16/13;
+		background: url(assets/images/logo-main.svg) no-repeat 50% / contain;
 		cursor: pointer;
 		transition: var(--transition);
 
