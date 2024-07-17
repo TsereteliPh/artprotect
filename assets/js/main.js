@@ -280,35 +280,33 @@ try {
 
 //Swiper
 
-//Слайдер blocks/rest
+//Слайдер blocks/employees-slider
 
-const clientsSlider = document.querySelector('.clients__container');
+const employeesSlider = document.querySelector('.employees-slider__slider');
 
-if (clientsSlider) {
-	let clientsSwiper = new Swiper(clientsSlider, {
+if (employeesSlider) {
+	let employeesSwiper = new Swiper(employeesSlider, {
 		slidesPerView: 'auto',
-		centeredSlides: true,
 		spaceBetween: 25,
 		navigation: {
-			nextEl: '.slider-panel__next',
-			prevEl: '.slider-panel__prev',
+			nextEl: '.employees-slider__next',
+			prevEl: '.employees-slider__prev',
 		},
 		breakpoints: {
 			1440: {
 				slidesPerView: 4,
-				centeredSlides: false,
-			},
-			992: {
-				slidesPerView: 3,
-				centeredSlides: false,
 			},
 			769: {
-				slidesPerView: 2,
-				centeredSlides: false,
-			},
-			577: {
-				centeredSlides: false,
-			},
+				slidesPerView: 3,
+			}
+		},
+		on: {
+			afterInit: function() {
+				if (this.slides.length <= this.params.slidesPerView) {
+					this.navigation.prevEl.style.display = 'none';
+					this.navigation.nextEl.style.display = 'none';
+				}
+			}
 		}
 	});
 }

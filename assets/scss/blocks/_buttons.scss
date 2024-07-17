@@ -57,3 +57,31 @@
 	box-shadow: var(--main-shadow);
 	transition: var(--transition);
 }
+
+.btn-prev,
+.btn-next {
+	color: var(--primary);
+	cursor: pointer;
+	transition: var(--transition);
+
+	@include mouse {
+
+		&:hover {
+			color: var(--fc-light);
+		}
+	}
+
+	&.swiper-button-disabled {
+		color: var(--fc-light);
+		cursor: default;
+		opacity: 0.3;
+		pointer-events: none;
+	}
+}
+
+.btn-prev {
+
+	svg {
+		transform: rotate(180deg);
+	}
+}
