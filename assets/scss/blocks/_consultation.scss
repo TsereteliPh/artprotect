@@ -1,0 +1,92 @@
+.consultation {
+	margin: 80px 0 40px;
+
+	@include xs {
+		margin: 40px 0 20px;
+	}
+
+	&__container {
+		z-index: var(--ui-index-1);
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		justify-content: center;
+		min-height: 400px;
+		padding: 90px;
+		background: url(assets/images/consultation-bg.jpg) no-repeat 50% / cover;
+
+		@include hg {
+			padding: 60px 40px;
+		}
+
+		@include sm {
+			align-items: center;
+			min-height: auto;
+			padding: 40px 30px 380px;
+		}
+
+		@include xs {
+			padding: 30px;
+		}
+
+		&::after {
+			position: absolute;
+			bottom: 0;
+			left: 450px;
+			width: 480px;
+			height: auto;
+			aspect-ratio: 1/1;
+			background: url(assets/images/employees-bg.png) no-repeat 50% / contain;
+			content: "";
+			pointer-events: none;
+
+			@include hg {
+				width: calc(450px - 2vw);
+			}
+
+			@include md {
+				right: 15px;
+				left: auto;
+				width: calc(60vw - 150px);
+			}
+
+			@include sm {
+				right: 50%;
+				width: 350px;
+				transform: translateX(50%);
+			}
+
+			@include xs {
+				display: none;
+			}
+		}
+	}
+
+	&__title {
+		max-width: 400px;
+		color: var(--tertiary);
+		text-align: left;
+
+		@include md {
+			max-width: 50%;
+		}
+
+		@include sm {
+			max-width: 400px;
+			text-align: center;
+		}
+
+		span {
+			color: var(--secondary);
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		max-width: 250px;
+		min-height: 90px;
+		padding: 25px 15px;
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+}
