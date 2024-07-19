@@ -4,7 +4,7 @@
 			<?php
 				$query = new WP_Query( [
 					'post_type' => 'services',
-					'posts_per_page' => 3,
+					'posts_per_page' => 6,
 					'paged' => 1,
 				] );
 
