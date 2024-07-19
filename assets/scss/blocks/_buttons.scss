@@ -9,6 +9,7 @@
 	color: var(--fc-light);
 	font-weight: 600;
 	font-size: 18px;
+	text-decoration: none;
 	background: none;
 	border: 1px solid var(--primary);
 	border-radius: 10px;
@@ -83,5 +84,44 @@
 
 	svg {
 		transform: rotate(180deg);
+	}
+}
+
+.btn-show-more {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 30px 40px;
+	color: var(--fc-light);
+	font-size: clamp(1.25rem, 1.077rem + 0.769vw, 2rem);
+	font-family: var(--font-secondary);
+	background: none;
+	border: 1px solid rgba(#fff, 0.5);
+	border-radius: 20px;
+	transition: var(--transition);
+
+	@include xs {
+		padding: 30px;
+	}
+
+	@include mouse {
+
+		&:hover {
+			border-color: #fff;
+			border-radius: 0;
+		}
+	}
+
+	&.loader {
+
+		&::before {
+			font-size: 30px;
+		}
+	}
+
+	svg {
+		color: var(--primary);
 	}
 }
