@@ -1,0 +1,114 @@
+.single-cases {
+	margin: 40px 0;
+
+	@include hg {
+		margin: 20px 0;
+	}
+
+	&__container {
+		z-index: var(--ui-index-1);
+	}
+
+	&__title {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+		justify-content: center;
+		min-height: 250px;
+		padding: 20px 0;
+
+		@include md {
+			min-height: 200px;
+		}
+
+		@include xs {
+			min-height: auto;
+			padding: 20px 0 0;
+		}
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: auto;
+			color: rgba(#28b8af, 0.2);
+			transform: translate(-50%, -50%);
+
+			@include xs {
+				top: 0;
+				left: 0;
+				transform: none;
+			}
+		}
+	}
+
+	&__title-img {
+		position: relative;
+		z-index: var(--ui-index-1);
+		width: 70px;
+		height: 70px;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+
+	&__title-text {
+		position: relative;
+		z-index: var(--ui-index-1);
+
+		a {
+			color: var(--primary);
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+		margin-top: 100px;
+
+		@include md {
+			margin-top: 60px;
+		}
+
+		@include xs {
+			gap: 50px;
+			margin-top: 40px;
+		}
+	}
+
+	&__box {
+		display: grid;
+		grid-template-columns: 420px 1fr;
+		gap: 80px;
+		padding-left: 115px;
+
+		@include hg {
+			padding-left: 0;
+		}
+
+		@include md {
+			grid-template-columns: 250px 1fr;
+			gap: 60px;
+		}
+
+		@include sm {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		@include xs {
+			gap: 20px;
+		}
+	}
+
+	&__label {
+		color: var(--primary);
+		font-weight: 300;
+		font-size: clamp(1.5rem, 1.385rem + 0.513vw, 2rem);
+	}
+}

@@ -481,6 +481,13 @@ acf_add_local_field_group(array(
 				'value' => 'services',
 			),
 		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'cases',
+			),
+		),
 	),
 	'menu_order' => 0,
 	'position' => 'normal',
@@ -505,7 +512,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1721399024,
+	'modified' => 1721657494,
 ));
 
 endif;

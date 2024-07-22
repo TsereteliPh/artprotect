@@ -1,0 +1,30 @@
+.st-ul {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	li {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		color: #d9d9d9;
+		font-size: 18px;
+
+		@include xs {
+			gap: 15px;
+			font-size: 16px;
+		}
+
+		&::before {
+			display: block;
+			flex-shrink: 0;
+			width: 15px;
+			height: 15px;
+			background:
+				url(assets/images/icon-arrow-small.svg) no-repeat 50% / 7px auto,
+				var(--main-gradient);
+			border-radius: 50%;
+			content: "";
+		}
+	}
+}

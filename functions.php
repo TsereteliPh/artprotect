@@ -61,6 +61,33 @@ if ( ! function_exists( 'adem_setup' ) ) {
 		'query_var' => true,
 		'publicly_queryable' => true
 	] );
+
+	register_post_type( 'cases', [
+		'label' => null,
+		'labels' => [
+			'name' => 'Кейсы',
+			'singular_name' => 'Кейс',
+			'add_new' => 'Добавить кейс',
+			'add_new_item' => 'Добавить кейс',
+			'edit_item' => 'Редактировать кейс',
+			'new_item' => 'Новый кейс',
+			'view_item' => 'Смотреть кейс',
+			'search_items' => 'Найти кейс',
+			'not_found' => 'Не найдено',
+			'not_found_in_trash' => 'Не найдено в корзине',
+			'menu_name' => 'Кейсы',
+		],
+		'public' => true,
+		'show_in_menu' => true,
+		'menu_position' => 22,
+		'menu_icon' => 'dashicons-groups',
+		'supports' => ['title', 'editor', 'excerpt'],
+		'taxonomies' => ['cases_type'],
+		'has_archive' => false,
+		'rewrite' => false,
+		'query_var' => true,
+		'publicly_queryable' => true
+	] );
 }
 
 add_action( 'after_setup_theme', 'adem_setup' );
