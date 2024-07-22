@@ -311,6 +311,34 @@ if (employeesSlider) {
 	});
 }
 
+//Слайдер blocks/services-slider
+
+const servicesSlider = document.querySelector('.services-slider__slider');
+
+if (servicesSlider) {
+	let servicesSwiper = new Swiper(servicesSlider, {
+		slidesPerView: 'auto',
+		spaceBetween: 25,
+		navigation: {
+			nextEl: '.services-slider__next',
+			prevEl: '.services-slider__prev',
+		},
+		breakpoints: {
+			1280: {
+				slidesPerView: 3
+			}
+		},
+		on: {
+			afterInit: function() {
+				if (this.slides.length <= this.params.slidesPerView) {
+					this.navigation.prevEl.style.display = 'none';
+					this.navigation.nextEl.style.display = 'none';
+				}
+			}
+		}
+	});
+}
+
 // Функционал шапки сайта
 
 document.addEventListener('DOMContentLoaded', function(e) {
