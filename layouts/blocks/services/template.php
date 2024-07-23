@@ -13,7 +13,7 @@
 				if ( $query->have_posts() ) {
 					if ( is_archive() ) {
 						foreach ( $posts as $post ) {
-							get_template_part('/layouts/partials/cards/service-card', null, array(
+							get_template_part('/layouts/partials/cards/post-card', null, array(
 								'class' => 'services__item',
 							) );
 						}
@@ -21,7 +21,7 @@
 						while ( $query->have_posts() ) {
 							$query->the_post();
 
-							get_template_part('/layouts/partials/cards/service-card', null, array(
+							get_template_part('/layouts/partials/cards/post-card', null, array(
 								'class' => 'services__item',
 							) );
 						}
