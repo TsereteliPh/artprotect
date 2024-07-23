@@ -23,7 +23,7 @@
 
 							<?php echo $title['text'] ? $title['text'] : get_the_title( $next_post->ID ); ?>
 
-							<?php if ( $title['link']['title'] ) : ?>
+							<?php if ( $title['link'] ) : ?>
 								<span><?php echo $title['link']['title']; ?></span>
 							<?php endif; ?>
 						<?php else : ?>
