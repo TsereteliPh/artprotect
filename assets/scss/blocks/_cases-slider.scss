@@ -1,0 +1,157 @@
+.cases-slider {
+	margin: 75px 0 50px;
+	overflow: hidden;
+
+	@include xs {
+		margin: 40px 0 20px;
+	}
+
+	&__slider {
+		margin-top: 40px;
+		overflow: visible;
+
+		@include xs {
+			margin-top: 30px;
+		}
+	}
+
+	&__list {
+		counter-increment: cases-counter 0;
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		width: 100%;
+		max-width: 540px;
+		height: auto;
+		padding-top: 50px;
+		background: url(assets/images/cases-slider-bg.jpg) no-repeat 50% / cover;
+		counter-increment: cases-counter 1;
+
+		@include lg {
+			max-width: 480px;
+		}
+
+		@include xs {
+			max-width: 270px;
+			padding-top: 100px;
+		}
+
+		&:hover {
+
+			&::before {
+				opacity: 0;
+			}
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: var(--secondary);
+			transition: all 0.5s ease-out;
+			content: "";
+		}
+
+		&::after {
+			position: absolute;
+			top: 20px;
+			right: 40px;
+			color: rgba(#fff, 0.2);
+			font-size: 100px;
+			line-height: 1;
+			content: counter(cases-counter);
+
+			@include lg {
+				font-size: 65px;
+			}
+		}
+	}
+
+	&__item-text,
+	&__item-client,
+	&__item-link {
+		position: relative;
+		z-index: var(--ui-index-1);
+		padding: 0 50px;
+
+		@include xs {
+			padding: 0 20px;
+		}
+	}
+
+	&__item-client {
+
+		@include xs {
+			margin-top: -15px;
+		}
+	}
+
+	&__item-text {
+		padding: 0 120px 0 50px;
+		font-weight: 500;
+		font-size: 22px;
+
+		@include lg {
+			font-size: 20px;
+		}
+
+		@include xs {
+			font-size: 18px;
+		}
+	}
+
+	&__item-link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: auto;
+		padding: 30px 50px 40px;
+		color: var(--primary);
+		font-size: 18px;
+		border-top: 1px solid rgba(#fff, 0.2);
+
+		@include xs {
+			padding: 30px 20px 40px;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 50px;
+
+		@include xs {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 30px 0;
+			margin-top: 30px;
+		}
+	}
+
+	&__link {
+		display: block;
+		margin: 0 auto;
+		color: var(--primary);
+		font-size: 18px;
+
+		@include xs {
+			grid-row: 2/3;
+			grid-column: span 2;
+			margin: 0;
+		}
+	}
+
+	&__next {
+
+		@include xs {
+			justify-self: end;
+		}
+	}
+}

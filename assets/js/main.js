@@ -339,6 +339,29 @@ if (servicesSlider) {
 	});
 }
 
+//Слайдер blocks/cases-slider
+
+const casesSlider = document.querySelector('.cases-slider__slider');
+
+if (casesSlider) {
+	let casesSwiper = new Swiper(casesSlider, {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.cases-slider__next',
+			prevEl: '.cases-slider__prev',
+		},
+		on: {
+			afterInit: function() {
+				if (this.slides.length <= this.params.slidesPerView) {
+					this.navigation.prevEl.style.display = 'none';
+					this.navigation.nextEl.style.display = 'none';
+				}
+			}
+		}
+	});
+}
+
 // Функционал шапки сайта
 
 document.addEventListener('DOMContentLoaded', function(e) {
