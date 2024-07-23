@@ -1,9 +1,12 @@
-.single-cases {
+section.single-cases {
 	margin: 40px 0;
 
 	@include hg {
 		margin: 20px 0;
 	}
+}
+
+.single-cases {
 
 	&__container {
 		z-index: var(--ui-index-1);
