@@ -1,0 +1,113 @@
+.steps {
+	margin: 100px 0 40px;
+
+	@include hg {
+		margin: 60px 0 30px;
+	}
+
+	@include xs {
+		margin: 30px 0;
+	}
+
+	&__container {
+		z-index: var(--ui-index-1);
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		margin-top: 40px;
+		padding: 150px 115px 130px;
+		background: #fff;
+		counter-reset: steps-counter 0;
+
+		@include hg {
+			padding: 100px 80px;
+		}
+
+		@include md {
+			padding: 60px 40px;
+		}
+
+		@include sm {
+			padding: 40px 30px;
+		}
+
+		@include xs {
+			margin-top: 20px;
+			padding: 40px 15px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 100px;
+		padding: 0 0 130px 90px;
+		border-bottom: 1px solid var(--fc-gray);
+		counter-increment: steps-counter 1;
+
+		@include lg {
+			gap: 60px;
+			padding: 0 0 100px 60px;
+		}
+
+		@include sm {
+			gap: 10px 30px;
+			padding: 0 0 30px 40px;
+		}
+
+		@include xs {
+			grid-template-columns: 1fr;
+		}
+
+		&:last-child {
+			padding: 0 0 0 90px;
+			border: none;
+
+			@include lg {
+				padding: 0 0 0 60px;
+			}
+
+			@include sm {
+				padding: 0 0 0 40px;
+			}
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: var(--secondary);
+			font-weight: 700;
+			font-size: 24px;
+			content: counter(steps-counter, decimal-leading-zero);
+
+			@include md {
+				font-size: 20px;
+			}
+		}
+	}
+
+	&__item-label {
+		color: var(--primary);
+		font-weight: 700;
+		font-size: 24px;
+
+		@include md {
+			font-size: 20px;
+		}
+	}
+
+	&__item-text {
+		color: var(--fc-dark);
+		font-size: 18px;
+		line-height: 1.4;
+
+		@include sm {
+			font-size: 16px;
+		}
+	}
+}
