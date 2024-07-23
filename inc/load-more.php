@@ -12,8 +12,12 @@ function load_more() {
 		while( $query->have_posts() ) {
 			$query->the_post();
 			if ( $args['post_type'] == 'services' ) {
-				$return_html .= get_template_part('layouts/partials/cards/service-card', null, array(
+				$return_html .= get_template_part('layouts/partials/cards/post-card', null, array(
 					'class' => 'services__item'
+				));
+			} else if ( $args['post_type'] == 'cases' ) {
+				$return_html .= get_template_part('layouts/partials/cards/post-card', null, array(
+					'class' => 'cases__item'
 				));
 			}
 		}

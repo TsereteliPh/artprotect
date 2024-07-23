@@ -121,6 +121,10 @@
 		}
 	}
 
+	&.hidden {
+		display: none;
+	}
+
 	svg {
 		color: var(--primary);
 	}

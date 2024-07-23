@@ -1,0 +1,17 @@
+.cases {
+	margin: 40px 0 20px;
+
+	&__container {
+		z-index: var(--ui-index-1);
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__btn {
+		margin-top: 20px;
+	}
+}
