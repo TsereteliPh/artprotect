@@ -67,24 +67,6 @@
 				</div>
 			</div>
 		</div>
-
-		<?php
-			$next_post = get_next_post();
-
-			if ( $next_post ) :
-				?>
-
-				<a href="<?php the_permalink( $next_post ); ?>" class="single-services__next">
-					<div class="single-services__next-label">Следующая услуга</div>
-
-					<div class="single-services__next-title"><?php echo $next_post->post_title; ?></div>
-
-					<svg width="100" height="15"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-arrow"></use></svg>
-				</a>
-
-				<?php
-			endif;
-		?>
 	</div>
 </section>
 
