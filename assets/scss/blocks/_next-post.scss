@@ -1,0 +1,70 @@
+.next-post {
+	margin: 80px 0 60px;
+
+	@include hg {
+		margin: 40px 0 30px;
+	}
+
+	@include xs {
+		margin: 30px 0;
+	}
+
+	&__container {
+		z-index: var(--ui-index-1);
+	}
+
+	&__link {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: 100px;
+		padding: 25px 40px 35px;
+		font-size: clamp(1.5rem, 1.385rem + 0.513vw, 2rem);
+		font-family: var(--font-secondary);
+		text-decoration: none;
+		border: 1px solid rgba(#fff, 0.5);
+		border-radius: 20px;
+		transition: var(--transition);
+
+		@include sm {
+			gap: 100px 20px;
+		}
+
+		@include xs {
+			grid-template-columns: 1fr;
+			gap: 30px;
+		}
+
+		@include mouse {
+
+			&:hover {
+				border-color: #fff;
+			}
+		}
+
+		svg {
+			align-self: end;
+			color: var(--primary);
+		}
+	}
+
+	&__label {
+		grid-column: span 2;
+		color: var(--primary);
+
+		@include xs {
+			grid-column: auto;
+		}
+	}
+
+	&__title {
+
+		@include xs {
+			margin-top: 30px;
+		}
+
+		span {
+			color: var(--secondary);
+			text-decoration: none;
+		}
+	}
+}
