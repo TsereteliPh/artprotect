@@ -163,7 +163,7 @@ function adem_scripts() {
 	wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/vendor/css/swiper-bundle.min.css', array(), '10.3.1' );
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/vendor/js/swiper-bundle.min.js', array(), '10.3.1', true );
 	wp_enqueue_style( 'adem', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_script( 'adem', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true ); //! change to minified version
+	wp_enqueue_script( 'adem', get_template_directory_uri() . '/assets/js/main.min.js', array(), _S_VERSION, true );
 	wp_localize_script( 'adem', 'adem_ajax', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
 }
 
@@ -176,6 +176,30 @@ add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );
 // excerpt
 function adem_excerpt( $limit, $ID = null ) {
 	return mb_substr( get_the_excerpt( $ID ), 0, $limit ) . '...';
+}
+
+// Custom breadcrumbs yoast
+add_filter( 'wpseo_breadcrumb_links', 'custom_breadcrumbs' );
+function custom_breadcrumbs( $links ) {
+	global $post;
+
+	if( is_singular( 'services' ) ) {
+		$breadcrumb[] = array(
+			'url' => get_page_link( 203 ),
+			'text' => 'Услуги',
+		);
+
+		array_splice( $links, 1, -2, $breadcrumb );
+	} else if ( is_singular( 'cases' ) ) {
+		$breadcrumb[] = array(
+			'url' => get_page_link( 305 ),
+			'text' => 'Кейсы',
+		);
+
+		array_splice( $links, 1, -2, $breadcrumb );
+	}
+
+	return $links;
 }
 
 // Breadcrumbs indent
