@@ -1,0 +1,124 @@
+.review-card {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 40px;
+	background: rgba(#262626, 0.4);
+	border-radius: 20px;
+	backdrop-filter: blur(100px);
+
+	@include md {
+		padding: 40px 20px;
+	}
+
+	&__info {
+		display: grid;
+		grid-template-columns: 50px 1fr auto;
+		gap: 5px 20px;
+	}
+
+	&__info-img {
+		grid-row: span 2;
+		width: 50px;
+		height: 50px;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+
+	&__info-name {
+		align-self: end;
+		font-weight: 700;
+		font-size: 14px;
+	}
+
+	&__info-rating {
+		display: flex;
+		grid-row: span 2;
+		gap: 4px;
+		align-items: center;
+	}
+
+	&__info-star {
+		color: var(--tertiary);
+
+		&--bright {
+			color: #4efe8f;
+		}
+	}
+
+	&__info-city {
+		grid-row: 2/3;
+		grid-column: 2/3;
+		color: var(--tertiary);
+		font-size: 14px;
+	}
+
+	&__info-site {
+		grid-column: span 3;
+		margin-top: 10px;
+		font-size: 14px;
+
+		a {
+			display: inline-block;
+			margin-left: 10px;
+			@include ui-link(#53bdeb);
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+	&__letter {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		max-height: 300px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__video {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16/9;
+		overflow: hidden;
+
+		@include mouse {
+
+			&:hover {
+
+				svg {
+					transform: translate(-50%, -50%) scale(1.1);
+				}
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			color: #4efe8f;
+			transform: translate(-50%, -50%);
+			transition: var(--transition);
+		}
+	}
+}

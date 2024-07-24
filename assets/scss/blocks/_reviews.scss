@@ -1,0 +1,107 @@
+.reviews {
+	margin: 40px 0 30px;
+
+	@include xs {
+		margin: 30px 0;
+	}
+
+	&__container {
+		z-index: var(--ui-index-1);
+	}
+
+	&__header {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: 10px 40px;
+
+		@include xs {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__tabs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		align-items: center;
+
+		@include xs {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__tab {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 65px;
+		padding: 20px 40px;
+		font-size: 20px;
+		background: none;
+		border: 1px solid var(--tertiary);
+		border-radius: 35px;
+		cursor: pointer;
+		transition: var(--transition);
+
+		@include hg {
+			min-height: 50px;
+			padding: 15px 20px;
+			font-size: 16px;
+		}
+
+		@include mouse {
+
+			&:hover {
+				border-color: var(--primary);
+			}
+		}
+
+		&.active {
+			background: var(--tertiary);
+			border-color: var(--primary);
+			cursor: default;
+		}
+	}
+
+	&__btn {
+		min-width: 250px;
+		height: fit-content;
+		min-height: 65px;
+
+		@include hg {
+			min-height: 50px;
+		}
+	}
+
+	&__content {
+		position: relative;
+		margin-top: 80px;
+
+		@include hg {
+			margin-top: 40px;
+		}
+
+		@include xs {
+			margin-top: 30px;
+		}
+	}
+
+	&__list {
+		display: none;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+
+		@include lg {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include sm {
+			grid-template-columns: 1fr;
+		}
+
+		&.active {
+			display: grid;
+		}
+	}
+}
