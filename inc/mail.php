@@ -121,6 +121,7 @@ add_action( "wp_ajax_nopriv_send_mail", "send_mail" );
 function send_mail() {
 	if ( empty ( $_POST['form_name'] ) || empty( $_POST['page_request'] ) ) exit;
 	if ( $_POST['form_name'] == 'Звонок' && ! wp_verify_nonce( $_POST['modal-callback-nonce'], $_POST['form_name'] ) ) exit;
+	if ( $_POST['form_name'] == 'Отзыв' && ! wp_verify_nonce( $_POST['modal-review-nonce'], $_POST['form_name'] ) ) exit;
 	if ( $_POST['form_name'] == 'Вопрос' && ! wp_verify_nonce( $_POST['form-question-nonce'], $_POST['form_name'] ) ) exit;
 	if ( $_POST['form_name'] == 'Консультация' && ( ! wp_verify_nonce( $_POST['footer-nonce'], $_POST['form_name'] ) && ! wp_verify_nonce( $_POST['modal-consultation-nonce'], $_POST['form_name'] ) ) ) exit;
 

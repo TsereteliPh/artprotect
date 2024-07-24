@@ -12,7 +12,7 @@
 						<?php endforeach; ?>
 					</ul>
 
-					<button class="btn btn--fill reviews__btn" type="button" data-fancybox data-src="<?php //todo modal ?>">Оставить свой отзыв</button>
+					<button class="btn btn--fill reviews__btn" type="button" data-fancybox data-src="#review">Оставить свой отзыв</button>
 				</div>
 
 				<div class="reviews__content">

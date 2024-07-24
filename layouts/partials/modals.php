@@ -49,3 +49,25 @@
 		<?php wp_nonce_field( 'Консультация', 'modal-consultation-nonce' ); ?>
 	</form>
 </div>
+
+<div class="modal modal--consultation" id="review">
+	<div class="modal__info">
+		<div class="title modal__title">Оставить отзыв</div>
+	</div>
+
+	<form method="POST" class="modal__form" name="Отзыв">
+		<input type="text" class="input modal__input" name="client_name" placeholder="Ваше имя" required>
+
+		<input type="email" class="input modal__input" name="client_email" placeholder="E - mail" required>
+
+		<textarea class="input modal__textarea" name="client_message" placeholder="Ваш отзыв" required></textarea>
+
+		<a href="<?php echo get_privacy_policy_url(); ?>" class="modal__policy">Я соглашаюсь с политикой конфиденциальности</a>
+
+		<button class="btn btn--fill modal__submit" type="submit">Отправить</button>
+
+		<input type="text" class="hidden" name="page_request" value="<?php echo is_archive() ? get_the_archive_title() : get_the_title(); ?>">
+
+		<?php wp_nonce_field( 'Отзыв', 'modal-review-nonce' ); ?>
+	</form>
+</div>
