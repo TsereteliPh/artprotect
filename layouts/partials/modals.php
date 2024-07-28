@@ -1,3 +1,13 @@
+<?php
+	$privacy_url = get_privacy_policy_url();
+
+	if ( is_archive() ) {
+		$page_title = get_the_archive_title();
+	} else {
+		$page_title = get_the_title();
+	}
+?>
+
 <div class="modal modal--success" id="success">
 	<div class="modal__info">
 		<div class="title modal__title">Спасибо!</div>
@@ -18,11 +28,11 @@
 
 		<input type="tel" class="input modal__input" name="client_tel" placeholder="+7 (999) 999-99-99" required>
 
-		<a href="<?php echo get_privacy_policy_url(); ?>" class="modal__policy">Я соглашаюсь с политикой конфиденциальности</a>
+		<a href="<?php echo $privacy_url; ?>" class="modal__policy">Я соглашаюсь с политикой конфиденциальности</a>
 
 		<button class="btn btn--fill modal__submit" type="submit">Заказать звонок</button>
 
-		<input type="text" class="hidden" name="page_request" value="<?php echo is_archive() ? get_the_archive_title() : get_the_title(); ?>">
+		<input type="text" class="hidden" name="page_request" value="<?php echo $page_title; ?>">
 
 		<?php wp_nonce_field( 'Звонок', 'modal-callback-nonce' ); ?>
 	</form>
@@ -40,11 +50,11 @@
 
 		<textarea class="input modal__textarea" name="client_message" placeholder="Ваш вопрос"></textarea>
 
-		<a href="<?php echo get_privacy_policy_url(); ?>" class="modal__policy">Я соглашаюсь с политикой конфиденциальности</a>
+		<a href="<?php echo $privacy_url; ?>" class="modal__policy">Я соглашаюсь с политикой конфиденциальности</a>
 
 		<button class="btn btn--fill modal__submit" type="submit">Проконсультироваться</button>
 
-		<input type="text" class="hidden" name="page_request" value="<?php echo is_archive() ? get_the_archive_title() : get_the_title(); ?>">
+		<input type="text" class="hidden" name="page_request" value="<?php echo $page_title; ?>">
 
 		<?php wp_nonce_field( 'Консультация', 'modal-consultation-nonce' ); ?>
 	</form>
@@ -62,11 +72,11 @@
 
 		<textarea class="input modal__textarea" name="client_message" placeholder="Ваш отзыв" required></textarea>
 
-		<a href="<?php echo get_privacy_policy_url(); ?>" class="modal__policy">Я соглашаюсь с политикой конфиденциальности</a>
+		<a href="<?php echo $privacy_url; ?>" class="modal__policy">Я соглашаюсь с политикой конфиденциальности</a>
 
 		<button class="btn btn--fill modal__submit" type="submit">Отправить</button>
 
-		<input type="text" class="hidden" name="page_request" value="<?php echo is_archive() ? get_the_archive_title() : get_the_title(); ?>">
+		<input type="text" class="hidden" name="page_request" value="<?php echo $page_title; ?>">
 
 		<?php wp_nonce_field( 'Отзыв', 'modal-review-nonce' ); ?>
 	</form>

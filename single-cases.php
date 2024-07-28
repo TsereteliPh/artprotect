@@ -8,15 +8,22 @@
 			<?php if ( $title['img'] ) echo wp_get_attachment_image( $title['img'], 'thumbnail', false, array( 'class' => 'single-cases__title-img' ) ); ?>
 
 			<h1 class="title single-cases__title-text">
-				<?php if ( $title['text'] ) : ?>
-					ПРЕДСТАВЛЯЕМ ИНТЕРЕСЫ:<br>
-				<?php endif; ?>
+				<?php
+					if ( $title['text'] ) {
+						echo 'ПРЕДСТАВЛЯЕМ ИНТЕРЕСЫ:<br>';
+					}
 
-				<?php echo $title['text'] ? $title['text'] : get_the_title(); ?>
+					echo $title['text'] ? $title['text'] : get_the_title();
 
-				<?php if ( $title['link'] ) : ?>
-					<a href="<?php echo $title['link']['url']; ?>" class="single-cases__title-link" target="<?php echo $title['link']['target']; ?>"><?php echo $title['link']['title']; ?></a>
-				<?php endif; ?>
+					if ( $title['link'] ) {
+						echo sprintf(
+							'<a href="%1$s" class="single-cases__title-link" target="%2$s">%3$s</a>',
+							$title['link']['url'],
+							$title['link']['target'],
+							$title['link']['title']
+						);
+					}
+				?>
 			</h1>
 
 			<svg width="1350" height="250"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-protect"></use></svg>
