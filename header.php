@@ -12,7 +12,7 @@
 <?php wp_body_open(); ?>
 
 <?php
-	$tel = get_field( 'tel', 'options' );
+	$phones = get_field( 'phones', 'options' );
 	$email = get_field( 'email', 'options' );
 ?>
 
@@ -28,8 +28,12 @@
 				'menu_class' => 'reset-list header__menu'
 			)); ?>
 
-			<?php if ( $tel ) : ?>
-				<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__tel"><?php echo $tel; ?></a>
+			<?php if ( $phones ) : ?>
+				<div class="header__phones">
+					<?php foreach ( $phones as $tel ) : ?>
+						<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel['tel'] ); ?>" class="header__tel"><?php echo $tel['tel']; ?></a>
+					<?php endforeach; ?>
+				</div>
 			<?php endif; ?>
 
 			<button class="btn header__callback" type="button" data-fancybox data-src="#callback">
@@ -55,8 +59,12 @@
 					<a href="mailto:<?php echo $email; ?>" class="header__drop-email"><?php echo $email; ?></a>
 				<?php endif; ?>
 
-				<?php if ( $tel ) : ?>
-					<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__drop-tel"><?php echo $tel; ?></a>
+				<?php if ( $phones ) : ?>
+					<div class="header__drop-phones">
+						<?php foreach ( $phones as $tel ) : ?>
+							<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel['tel'] ); ?>" class="header__drop-tel"><?php echo $tel['tel']; ?></a>
+						<?php endforeach; ?>
+					</div>
 				<?php endif; ?>
 
 				<button class="btn header__drop-callback" type="button" data-fancybox data-src="#callback">

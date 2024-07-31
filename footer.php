@@ -30,13 +30,17 @@
 
 		<div class="footer__content">
 			<?php
-				$tel = get_field( 'tel', 'options' );
+				$phones = get_field( 'phones', 'options' );
 				$email = get_field( 'email', 'options' );
 			?>
 
-			<div class="footer__phones">
-				<?php if ( $tel ) : ?>
-					<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="footer__tel"><?php echo $tel; ?></a>
+			<div class="footer__phones-wrapper">
+				<?php if ( $phones ) : ?>
+					<div class="footer__phones">
+						<?php foreach ( $phones as $tel ) : ?>
+							<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel['tel'] ); ?>" class="footer__tel"><?php echo $tel['tel']; ?></a>
+						<?php endforeach; ?>
+					</div>
 				<?php endif; ?>
 
 				<button class="btn footer__callback" type="button" data-fancybox data-src="#callback">

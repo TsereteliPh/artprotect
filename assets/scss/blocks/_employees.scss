@@ -25,16 +25,16 @@
 	&__container {
 		z-index: var(--ui-index-2);
 		min-height: 790px;
-		padding: 60px 80px 120px;
+		padding: 60px 80px 620px;
 		color: #414141;
 		background: #fff;
 
 		@include hg {
-			padding: 60px 60px 120px;
+			padding: 60px 60px 570px;
 		}
 
 		@include lg {
-			padding: 40px 40px 80px;
+			padding: 40px 40px calc(40vw + 20px);
 		}
 
 		@include md {
@@ -96,29 +96,23 @@
 	&__content {
 		position: relative;
 		z-index: var(--ui-index-1);
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		gap: 100px;
-		justify-content: space-between;
 		margin-top: 65px;
 
-		@include sm {
-			flex-direction: column;
-			gap: 80px;
+		@include md {
+			gap: 40px;
+		}
+
+		@include md {
+			grid-template-columns: 1fr;
 			margin-top: 40px;
 		}
 
 		@include xs {
 			gap: 40px;
 			margin-top: 20px;
-		}
-	}
-
-	&__male,
-	&__female {
-		max-width: 280px;
-
-		@include md {
-			max-width: none;
 		}
 	}
 

@@ -118,8 +118,22 @@
 		}
 	}
 
-	&__tel {
+	&__phones,
+	&__drop-phones {
+		display: flex;
+		flex-direction: column;
 		flex-shrink: 0;
+		gap: 5px;
+	}
+
+	&__phones {
+
+		@include lg {
+			display: none;
+		}
+	}
+
+	&__tel {
 		font-weight: 600;
 		font-size: 22px;
 		text-decoration: none;
