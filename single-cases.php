@@ -17,7 +17,7 @@
 
 					if ( $title['link'] ) {
 						echo sprintf(
-							'<a href="%1$s" class="single-cases__title-link" target="%2$s">%3$s</a>',
+							' <a href="%1$s" class="single-cases__title-link" target="%2$s">%3$s</a>',
 							$title['link']['url'],
 							$title['link']['target'],
 							$title['link']['title']
