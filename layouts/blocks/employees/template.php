@@ -37,7 +37,15 @@
 				</div>
 
 				<?php if ( $male['text'] ) : ?>
-					<div class="employees__text"><?php echo $male['text']; ?></div>
+					<?php if ( mb_strlen( $male['text'], 'utf-8' ) > 200 ) : ?>
+						<div class="employees__text"><?php echo mb_substr( $male['text'], 0, 200 ) . '...'; ?></div>
+
+						<button class="employees__link" type="button" data-fancybox data-src="#employees-male-text">Читать подробнее</button>
+
+						<div class="employees__modal" id="employees-male-text"><?php echo $male['text']; ?></div>
+					<?php else : ?>
+						<div class="employees__text"><?php echo $male['text']; ?></div>
+					<?php endif; ?>
 				<?php endif; ?>
 			</div>
 
@@ -55,7 +63,15 @@
 				</div>
 
 				<?php if ( $female['text'] ) : ?>
-					<div class="employees__text"><?php echo $female['text']; ?></div>
+					<?php if ( mb_strlen( $female['text'], 'utf-8' ) > 200 ) : ?>
+						<div class="employees__text"><?php echo mb_substr( $female['text'], 0, 200 ) . '...'; ?></div>
+
+						<button class="employees__link" type="button" data-fancybox data-src="#employees-female-text">Читать подробнее</button>
+
+						<div class="employees__modal" id="employees-female-text"><?php echo $female['text']; ?></div>
+					<?php else : ?>
+						<div class="employees__text"><?php echo $female['text']; ?></div>
+					<?php endif; ?>
 				<?php endif; ?>
 
 				<?php

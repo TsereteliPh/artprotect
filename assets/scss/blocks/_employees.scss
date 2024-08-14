@@ -25,16 +25,16 @@
 	&__container {
 		z-index: var(--ui-index-2);
 		min-height: 790px;
-		padding: 60px 80px 620px;
+		padding: 60px 80px 120px;
 		color: #414141;
 		background: #fff;
 
 		@include hg {
-			padding: 60px 60px 570px;
+			padding: 60px 60px 120px;
 		}
 
 		@include lg {
-			padding: 40px 40px calc(40vw + 20px);
+			padding: 40px 40px 80px;
 		}
 
 		@include md {
@@ -96,23 +96,29 @@
 	&__content {
 		position: relative;
 		z-index: var(--ui-index-1);
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		display: flex;
 		gap: 100px;
+		justify-content: space-between;
 		margin-top: 65px;
 
-		@include md {
-			gap: 40px;
-		}
-
-		@include md {
-			grid-template-columns: 1fr;
+		@include sm {
+			flex-direction: column;
+			gap: 80px;
 			margin-top: 40px;
 		}
 
 		@include xs {
 			gap: 40px;
 			margin-top: 20px;
+		}
+	}
+
+	&__male,
+	&__female {
+		max-width: 280px;
+
+		@include md {
+			max-width: none;
 		}
 	}
 
@@ -166,12 +172,50 @@
 	&__link {
 		display: block;
 		margin-top: 40px;
+		padding: 0;
 		color: var(--primary);
 		font-weight: 500;
 		font-size: 18px;
+		text-decoration: underline;
+		background: none;
+		border: none;
 
 		@include md {
 			margin-top: 20px;
+		}
+	}
+
+	&__modal {
+		display: none;
+		max-width: 800px;
+		padding: 40px 60px;
+		line-height: 1.4;
+		background: #fff;
+		border: 2px solid var(--primary);
+
+		@include xs {
+			padding: 60px 20px 40px;
+		}
+
+		.carousel__button.is-close {
+			top: 15px;
+			right: 15px;
+			padding: 0;
+			color: var(--primary);
+			background: none;
+			border: none;
+			border-radius: 50%;
+			opacity: 1;
+
+			@include xs {
+				top: 10px;
+				right: 10px;
+			}
+
+			svg {
+				width: 25px;
+				height: 25px;
+			}
 		}
 	}
 
