@@ -14,7 +14,7 @@
 				<svg width="100" height="15"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-arrow"></use></svg>
 			</div>
 
-			<button class="btn btn--fill how-it-works__btn" type="button" data-fancybox data-src="consultation">Проконсультироваться</button>
+			<button class="btn btn--fill how-it-works__btn" type="button" data-fancybox data-src="#consultation">Проконсультироваться</button>
 		</div>
 
 		<div class="how-it-works__scheme">
@@ -24,7 +24,7 @@
 						<svg width="39" height="41"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-art"></use></svg>
 					</div>
 
-					<div class="how-it-works__scheme-label">Художник</div>
+					<div class="how-it-works__scheme-label">Автор</div>
 				</div>
 
 				<div class="how-it-works__scheme-object how-it-works__scheme-object--logo">

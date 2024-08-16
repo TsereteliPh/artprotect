@@ -112,7 +112,7 @@ if ( ! function_exists( 'adem_setup' ) ) {
 		'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
 		'taxonomies' => ['services_type'],
 		'has_archive' => false,
-		'rewrite' => false,
+		'rewrite' => array('slug' => 'services', 'with_front' => false),
 		'query_var' => true,
 		'publicly_queryable' => true
 	] );
@@ -139,7 +139,7 @@ if ( ! function_exists( 'adem_setup' ) ) {
 		'supports' => ['title', 'editor', 'excerpt'],
 		'taxonomies' => ['cases_type'],
 		'has_archive' => false,
-		'rewrite' => false,
+		'rewrite' => array('slug' => 'cases', 'with_front' => false),
 		'query_var' => true,
 		'publicly_queryable' => true
 	] );
