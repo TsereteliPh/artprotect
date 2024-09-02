@@ -42,7 +42,13 @@
 
 						<button class="employees__link" type="button" data-fancybox data-src="#employees-male-text">Читать подробнее</button>
 
-						<div class="employees__modal" id="employees-male-text"><?php echo $male['text']; ?></div>
+						<div class="employees__modal" id="employees-male-text">
+							<div class="employees__modal-text"><?php echo $male['text']; ?></div>
+
+							<?php if ( $male['photo'] ) : ?>
+								<div class="employees__modal-photo"><?php echo wp_get_attachment_image( $male['photo'], 'large', false ); ?></div>
+							<?php endif; ?>
+						</div>
 					<?php else : ?>
 						<div class="employees__text"><?php echo $male['text']; ?></div>
 					<?php endif; ?>
@@ -68,7 +74,13 @@
 
 						<button class="employees__link" type="button" data-fancybox data-src="#employees-female-text">Читать подробнее</button>
 
-						<div class="employees__modal" id="employees-female-text"><?php echo $female['text']; ?></div>
+						<div class="employees__modal" id="employees-female-text">
+							<div class="employees__modal-text"><?php echo $female['text']; ?></div>
+
+							<?php if ( $female['photo'] ) : ?>
+								<div class="employees__modal-photo"><?php echo wp_get_attachment_image( $female['photo'], 'large', false ); ?></div>
+							<?php endif; ?>
+						</div>
 					<?php else : ?>
 						<div class="employees__text"><?php echo $female['text']; ?></div>
 					<?php endif; ?>
