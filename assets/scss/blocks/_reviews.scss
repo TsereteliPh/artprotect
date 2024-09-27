@@ -65,12 +65,17 @@
 	}
 
 	&__btn {
+		grid-column: 2/3;
 		min-width: 250px;
 		height: fit-content;
 		min-height: 65px;
 
 		@include hg {
 			min-height: 50px;
+		}
+
+		@include xs {
+			grid-column: auto;
 		}
 	}
 

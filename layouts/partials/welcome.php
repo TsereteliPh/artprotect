@@ -22,7 +22,7 @@
 
 					<button class="btn btn--fill welcome__btn" type="button" data-fancybox data-src="#consultation">
 						<svg width="24" height="24"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-message"></use></svg>
-						ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+						ПОЛУЧИТЬ БЕСПЛАТНО КОНСУЛЬТАЦИЮ
 					</button>
 
 					<button class="btn welcome__callback" type="button" data-fancybox data-src="#callback">

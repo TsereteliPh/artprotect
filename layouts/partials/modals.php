@@ -20,13 +20,13 @@
 	<div class="modal__info">
 		<div class="title modal__title">Заказать звонок</div>
 
-		<div class="modal__text">Заполните форму, я свяжусь c вами, мы обсудим проблему</div>
+		<div class="modal__text">Заполните форму, мы свяжемся с вами для обсуждения проблемы</div>
 	</div>
 
 	<form method="POST" class="modal__form" name="Звонок">
 		<input type="text" class="input modal__input" name="client_name" placeholder="Ваше имя" required>
 
-		<input type="tel" class="input modal__input" name="client_tel" placeholder="+7 (999) 999-99-99" required>
+		<input type="tel" class="input modal__input" name="client_tel" pattern=".{18,}" placeholder="+7 (999) 999-99-99" required>
 
 		<a href="<?php echo $privacy_url; ?>" class="modal__policy">Я соглашаюсь с политикой конфиденциальности</a>
 
@@ -46,7 +46,7 @@
 	<form method="POST" class="modal__form" name="Консультация">
 		<input type="text" class="input modal__input" name="client_name" placeholder="Ваше имя" required>
 
-		<input type="tel" class="input modal__input" name="client_tel" placeholder="+7 (999) 999-99-99" required>
+		<input type="tel" class="input modal__input" name="client_tel" pattern=".{18,}" title="Минимум 16 символов" placeholder="+7 (999) 999-99-99" required>
 
 		<textarea class="input modal__textarea" name="client_message" placeholder="Ваш вопрос"></textarea>
 

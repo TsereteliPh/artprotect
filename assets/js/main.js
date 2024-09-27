@@ -394,3 +394,16 @@ document.addEventListener('DOMContentLoaded', function(e) {
 		})
 	}
 })
+
+// Удаление недопустимых символов для инпута с именем
+
+const nameInputs = document.querySelectorAll('input[name=client_name]');
+
+if (nameInputs) {
+	nameInputs.forEach(input => {
+		input.addEventListener('input', () => {
+			input.value = input.value.replace(/[^A-Za-zА-Яа-яЁё]/g, '');
+		});
+	});
+}
+

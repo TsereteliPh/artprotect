@@ -66,19 +66,10 @@
 		font-weight: 600;
 	}
 
-	&__form,
-	&__content {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 10px;
-		align-items: center;
-
-		@include xs {
-			grid-template-columns: 1fr;
-		}
-	}
-
 	&__form {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
 
 		@include lg {
 			margin-bottom: 45px;
@@ -94,6 +85,7 @@
 		}
 
 		@include xs {
+			grid-template-columns: 1fr;
 			gap: 10px;
 		}
 	}
@@ -101,18 +93,22 @@
 	&__form-submit {
 		width: 100%;
 
-		@include xs {
+		@include sm {
 			order: 1;
+		}
+
+		@include xs {
+			order: 0;
 		}
 	}
 
 	&__form-policy {
+		grid-column: span 3;
 		font-weight: 600;
 		font-size: 14px;
 		@include ui-link(var(--primary));
 
 		@include md {
-			grid-column: span 3;
 			text-align: center;
 		}
 
@@ -120,11 +116,19 @@
 			grid-column: auto;
 			text-align: left;
 		}
+
+		@include xs {
+			// text-align: center;
+		}
 	}
 
 	&__content {
 		position: relative;
 		z-index: var(--ui-index-1);
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 10px;
+		align-items: center;
 		padding-top: 20px;
 
 		@include lg {
@@ -137,6 +141,7 @@
 		}
 
 		@include xs {
+			grid-template-columns: 1fr;
 			gap: 30px;
 		}
 	}

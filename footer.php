@@ -5,13 +5,13 @@
 		<div class="footer__info">
 			<div class="title footer__label">Обратная связь</div>
 
-			<div class="footer__text">Заполните форму, я свяжусь c вами, мы обсудим проблему</div>
+			<div class="footer__text">Заполните форму, мы свяжемся с вами для обсуждения проблемы</div>
 		</div>
 
 		<form method="POST" class="footer__form" name="Консультация">
 			<input type="text" class="input footer__input" name="client_name" placeholder="Ваше имя" required>
 
-			<input type="tel" class="input footer__input" name="client_tel" placeholder="+7 (999) 999-99-99" required>
+			<input type="tel" class="input footer__input" name="client_tel" pattern=".{18,}" placeholder="+7 (999) 999-99-99" required>
 
 			<button class="btn btn--fill footer__form-submit" type="submit">Проконсультироваться</button>
 

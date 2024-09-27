@@ -13,15 +13,6 @@
 		text-align: left;
 	}
 
-	&__text {
-		max-width: 250px;
-		margin-top: 40px;
-
-		@include hg {
-			margin-top: 30px;
-		}
-	}
-
 	&__form {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);

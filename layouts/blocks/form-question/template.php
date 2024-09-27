@@ -5,10 +5,6 @@
 			'title' => get_sub_field( 'title' )
 		) ); ?>
 
-		<?php if ( get_sub_field( 'text' ) ) : ?>
-			<div class="form-question__text"><?php the_sub_field( 'text' ); ?></div>
-		<?php endif; ?>
-
 		<form method="POST" class="form-question__form" name="Вопрос">
 			<input type="text" class="input form-question__input" name="client_name" placeholder="Ваше имя" required>
 

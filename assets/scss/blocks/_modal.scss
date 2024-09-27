@@ -1,7 +1,7 @@
 .modal {
 	display: none;
 	flex-direction: column;
-	gap: 60px;
+	gap: 40px;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
@@ -16,7 +16,6 @@
 	}
 
 	@include sm {
-		gap: 40px;
 		min-height: 400px;
 		padding: 60px 30px;
 	}
@@ -71,8 +70,8 @@
 
 	&__info {
 		display: flex;
-		gap: 10px;
-		align-items: center;
+		flex-direction: column;
+		gap: 15px;
 		width: 100%;
 
 		@include xs {
