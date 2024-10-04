@@ -170,8 +170,6 @@ function send_mail() {
 
 			if ( get_sub_field( 'emails_traffic' ) ) {
 				$mailBody .= isset( $_COOKIE['traffic_source'] ) ? "Трафик: $_COOKIE[traffic_source] <br/>" : '';
-				$mailBody .= isset( $_COOKIE['landing_page'] ) ? "Страница входа: $_COOKIE[landing_page] <br/>" : '';
-				$mailBody .= isset( $_COOKIE['category_urls'] ) ? "Посещенные страницы: $_COOKIE[category_urls]" : '';
 			}
 
 			wp_mail( $emailTo, $subject, $mailBody, $headers );
@@ -180,8 +178,6 @@ function send_mail() {
 
 	$metaBody = $mail;
 	$metaBody .= isset( $_COOKIE['traffic_source'] ) ? "Трафик: $_COOKIE[traffic_source] <br/>" : '';
-	$metaBody .= isset( $_COOKIE['landing_page'] ) ? "Страница входа: $_COOKIE[landing_page] <br/>" : '';
-	$metaBody .= isset( $_COOKIE['category_urls'] ) ? "Посещенные страницы: $_COOKIE[category_urls]" : '';
 
 	update_post_meta( $post_ID, 'metaBody', $metaBody );
 
