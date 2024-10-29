@@ -19,6 +19,10 @@ function load_more() {
 				$return_html .= get_template_part('layouts/partials/cards/post-card', null, array(
 					'class' => 'cases__item'
 				));
+			} else if ( $args['cat'] == 7 ) {
+				$return_html .= get_template_part('layouts/partials/cards/blog-card', null, array(
+					'class' => 'blog__item'
+				));
 			}
 		}
 		wp_reset_postdata();

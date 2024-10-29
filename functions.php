@@ -197,6 +197,14 @@ function custom_breadcrumbs( $links ) {
 		);
 
 		array_splice( $links, 1, -2, $breadcrumb );
+	} else if ( in_category( 7 ) && is_singular() ) {
+		$breadcrumb[] = array(
+			'url' => get_category_link( 7 ),
+			'text' => 'Блог',
+		);
+
+		array_splice( $links, 1, -2, $breadcrumb );
+
 	}
 
 	return $links;

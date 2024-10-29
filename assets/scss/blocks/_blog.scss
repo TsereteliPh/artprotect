@@ -1,0 +1,38 @@
+.blog {
+	margin: 60px 0 40px;
+
+	@include md {
+		margin: 40px 0 30px;
+	}
+
+	@include xs {
+		margin: 30px 0;
+	}
+
+	&__container {
+		z-index: var(--ui-index-1);
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		margin-top: 40px;
+
+		@include hg {
+			gap: 20px;
+		}
+
+		@include md {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include xs {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__btn {
+		margin-top: 40px;
+	}
+}
