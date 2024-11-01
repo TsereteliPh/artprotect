@@ -7,12 +7,13 @@ function change_toolbar($args)
 		[
 			'title' => 'Ненумерованный список',
 			'selector' => 'ul',
-			'classes' => 'article-ul',
+			'classes' => 'st-ul',
 		],
 		[
-			'title' => 'Нумерованный список',
-			'selector' => 'ol',
-			'classes' => 'article-ol',
+			'title' => 'Граница слева',
+			'block' => 'div',
+			'classes' => 'st-left-border',
+			'wrapper' => true
 		],
 		[
 			'title' => 'Стиль текста',
@@ -32,10 +33,10 @@ function change_toolbar($args)
 					],
 				],
 				[
-					'title' => 'Extra Bold',
+					'title' => 'Bold',
 					'selector' => 'ul, ol, a, p, span',
 					'styles' => [
-						'font-weight' => '800',
+						'font-weight' => '700',
 					],
 				],
 			]
