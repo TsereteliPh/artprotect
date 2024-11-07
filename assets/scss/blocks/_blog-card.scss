@@ -28,13 +28,9 @@
 
 	&__link {
 		font-weight: 700;
-		font-size: 24px;
+		font-size: 20px;
 		text-align: center;
 		@include ui-link(var(--primary));
-
-		@include sm {
-			font-size: 20px;
-		}
 
 		@include xs {
 			font-size: 18px;

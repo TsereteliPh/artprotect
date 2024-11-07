@@ -6,7 +6,9 @@
 		) ); ?>
 
 		<?php if ( get_sub_field( 'text' ) ) : ?>
-			<div class="main-text__text"><?php the_sub_field( 'text' ); ?></div>
+			<div class="main-text__text">
+				<?php the_sub_field( 'text' ); ?>
+			</div>
 		<?php endif; ?>
 	</div>
 </section>
