@@ -85,6 +85,28 @@ acf_add_local_field_group(array(
 			),
 		),
 		array(
+			'key' => 'field_674d8353b28a4',
+			'label' => 'Текст',
+			'name' => 'text',
+			'aria-label' => '',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'acfe_textarea_code' => 0,
+			'maxlength' => '',
+			'rows' => 3,
+			'placeholder' => '',
+			'new_lines' => '',
+			'acfe_field_group_condition' => 0,
+		),
+		array(
 			'key' => 'field_669a7610db632',
 			'label' => 'Услуги',
 			'name' => 'services',
@@ -139,6 +161,10 @@ acf_add_local_field_group(array(
 					'bidirectional_target' => array(
 					),
 					'save_post_type' => '',
+					'acfe_add_post' => 0,
+					'acfe_edit_post' => 0,
+					'min' => '',
+					'max' => '',
 					'parent_repeater' => 'field_669a7610db632',
 				),
 				array(
@@ -190,14 +216,14 @@ acf_add_local_field_group(array(
 	'active' => false,
 	'description' => '',
 	'show_in_rest' => 0,
-	'acfe_display_title' => '',
 	'acfe_autosync' => array(
 		0 => 'php',
 	),
 	'acfe_form' => 0,
+	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1721399192,
+	'modified' => 1733133263,
 ));
 
 endif;

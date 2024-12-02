@@ -318,24 +318,20 @@ const servicesSlider = document.querySelector('.services-slider__slider');
 if (servicesSlider) {
 	let servicesSwiper = new Swiper(servicesSlider, {
 		slidesPerView: 'auto',
-		spaceBetween: 25,
+		spaceBetween: 15,
 		navigation: {
 			nextEl: '.services-slider__next',
 			prevEl: '.services-slider__prev',
 		},
 		breakpoints: {
 			1280: {
-				slidesPerView: 3
+				slidesPerView: 3,
+				spaceBetween: 25
+			},
+			769: {
+				spaceBetween: 25
 			}
 		},
-		on: {
-			afterInit: function() {
-				if (this.slides.length <= this.params.slidesPerView) {
-					this.navigation.prevEl.style.display = 'none';
-					this.navigation.nextEl.style.display = 'none';
-				}
-			}
-		}
 	});
 }
 
