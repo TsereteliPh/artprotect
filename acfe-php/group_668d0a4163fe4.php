@@ -602,8 +602,8 @@ acf_add_local_field_group(array(
 				),
 				'layout_669a76e370b4d' => array(
 					'key' => 'layout_669a76e370b4d',
-					'name' => 'services-slider',
-					'label' => 'Слайдер услуг',
+					'name' => 'info-slider',
+					'label' => 'Слайдер услуг/информации',
 					'display' => 'block',
 					'sub_fields' => array(
 						array(
@@ -1107,7 +1107,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1733151578,
+	'modified' => 1733236901,
 ));
 
 endif;

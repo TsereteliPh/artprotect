@@ -311,17 +311,17 @@ if (employeesSlider) {
 	});
 }
 
-//Слайдер blocks/services-slider
+//Слайдер blocks/info-slider
 
-const servicesSlider = document.querySelector('.services-slider__slider');
+const infoSlider = document.querySelector('.info-slider__slider');
 
-if (servicesSlider) {
-	let servicesSwiper = new Swiper(servicesSlider, {
+if (infoSlider) {
+	let infoSwiper = new Swiper(infoSlider, {
 		slidesPerView: 'auto',
 		spaceBetween: 15,
 		navigation: {
-			nextEl: '.services-slider__next',
-			prevEl: '.services-slider__prev',
+			nextEl: '.info-slider__next',
+			prevEl: '.info-slider__prev',
 		},
 		breakpoints: {
 			1280: {
