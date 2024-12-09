@@ -18,16 +18,16 @@
 		flex-direction: column;
 		gap: 30px;
 		margin-top: 40px;
-		padding: 150px 115px 130px;
+		padding: 60px 100px;
 		background: #fff;
 		counter-reset: steps-counter 0;
 
 		@include hg {
-			padding: 100px 80px;
+			padding: 60px 80px;
 		}
 
 		@include md {
-			padding: 60px 40px;
+			padding: 40px;
 		}
 
 		@include sm {
@@ -44,15 +44,10 @@
 		position: relative;
 		display: grid;
 		grid-template-columns: 1fr 2fr;
-		gap: 100px;
-		padding: 0 0 130px 90px;
+		gap: 30px;
+		padding: 0 0 30px 60px;
 		border-bottom: 1px solid var(--fc-gray);
 		counter-increment: steps-counter 1;
-
-		@include lg {
-			gap: 60px;
-			padding: 0 0 100px 60px;
-		}
 
 		@include sm {
 			gap: 10px 30px;
@@ -64,12 +59,8 @@
 		}
 
 		&:last-child {
-			padding: 0 0 0 90px;
+			padding: 0 0 0 60px;
 			border: none;
-
-			@include lg {
-				padding: 0 0 0 60px;
-			}
 
 			@include sm {
 				padding: 0 0 0 40px;
